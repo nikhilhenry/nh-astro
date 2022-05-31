@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/preact': ^0.1.2
   '@astrojs/svelte': ^0.1.3
   '@astrojs/tailwind': ^0.2.1
   astro: ^1.0.0-beta.37
@@ -12,7 +11,6 @@ dependencies:
   preact: 10.7.2
 
 devDependencies:
-  '@astrojs/preact': 0.1.2_preact@10.7.2
   '@astrojs/svelte': 0.1.3_svelte@3.48.0
   '@astrojs/tailwind': 0.2.1
   astro: 1.0.0-beta.37
@@ -78,19 +76,6 @@ packages:
       vfile: 5.3.2
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@astrojs/preact/0.1.2_preact@10.7.2:
-    resolution: {integrity: sha512-u9LUq0/0mCvNkl0Z3Ezj8iqV6tz60dxkmUyOwGVh9RG/dqKswyZeOV7xWC5zxBkH8zufh7l58PHrFCIe+rM1pA==}
-    engines: {node: ^14.15.0 || >=16.0.0}
-    peerDependencies:
-      preact: ^10.6.5
-    dependencies:
-      '@babel/plugin-transform-react-jsx': 7.17.12
-      preact: 10.7.2
-      preact-render-to-string: 5.2.0_preact@10.7.2
-    transitivePeerDependencies:
-      - '@babel/core'
     dev: true
 
   /@astrojs/prism/0.4.1:
@@ -211,13 +196,6 @@ packages:
       jsesc: 2.5.2
     dev: true
 
-  /@babel/helper-annotate-as-pure/7.16.7:
-    resolution: {integrity: sha512-s6t2w/IPQVTAET1HitoowRGXooX8mCgtuP5195wD/QJPV6wYjpujCGF7JuMODVX2ZAJOf1GT6DT9MHEZvLOFSw==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/types': 7.18.4
-    dev: true
-
   /@babel/helper-compilation-targets/7.18.2_@babel+core@7.18.2:
     resolution: {integrity: sha512-s1jnPotJS9uQnzFtiZVBUxe67CuBa679oWFHpxYYnTpRL/1ffhyX44R9uYiXoa/pLXcY9H2moJta0iaanlk/rQ==}
     engines: {node: '>=6.9.0'}
@@ -274,11 +252,6 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/helper-plugin-utils/7.17.12:
-    resolution: {integrity: sha512-JDkf04mqtN3y4iAbO1hv9U2ARpPyPL1zqyWs/2WG1pgSq9llHFjStX5jdxb84himgJm+8Ng+x0oiWF/nw/XQKA==}
-    engines: {node: '>=6.9.0'}
-    dev: true
-
   /@babel/helper-simple-access/7.18.2:
     resolution: {integrity: sha512-7LIrjYzndorDY88MycupkpQLKS1AFfsVRm2k/9PtKScSy5tZq0McZTj+DiMRynboZfIqOKvo03pmhTaUgiD6fQ==}
     engines: {node: '>=6.9.0'}
@@ -328,28 +301,6 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': 7.18.4
-    dev: true
-
-  /@babel/plugin-syntax-jsx/7.17.12:
-    resolution: {integrity: sha512-spyY3E3AURfxh/RHtjx5j6hs8am5NbUBGfcZ2vB3uShSpZdQyXSf5rR5Mk76vbtlAZOelyVQ71Fg0x9SG4fsog==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/helper-plugin-utils': 7.17.12
-    dev: true
-
-  /@babel/plugin-transform-react-jsx/7.17.12:
-    resolution: {integrity: sha512-Lcaw8bxd1DKht3thfD4A12dqo1X16he1Lm8rIv8sTwjAYNInRS1qHa9aJoqvzpscItXvftKDCfaEQzwoVyXpEQ==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/helper-annotate-as-pure': 7.16.7
-      '@babel/helper-module-imports': 7.16.7
-      '@babel/helper-plugin-utils': 7.17.12
-      '@babel/plugin-syntax-jsx': 7.17.12
       '@babel/types': 7.18.4
     dev: true
 
@@ -3096,17 +3047,9 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /preact-render-to-string/5.2.0_preact@10.7.2:
-    resolution: {integrity: sha512-+RGwSW78Cl+NsZRUbFW1MGB++didsfqRk+IyRVTaqy+3OjtpKK/6HgBtfszUX0YXMfo41k2iaQSseAHGKEwrbg==}
-    peerDependencies:
-      preact: '>=10'
-    dependencies:
-      preact: 10.7.2
-      pretty-format: 3.8.0
-    dev: true
-
   /preact/10.7.2:
     resolution: {integrity: sha512-GLjn0I3r6ka+NvxJUppsVFqb4V0qDTEHT/QxHlidPuClGaxF/4AI2Qti4a0cv3XMh5n1+D3hLScW10LRIm5msQ==}
+    dev: false
 
   /preferred-pm/3.0.3:
     resolution: {integrity: sha512-+wZgbxNES/KlJs9q40F/1sfOd/j7f1O9JaHcW5Dsn3aUUOZg3L2bjpVUcKV2jvtElYfoTuQiNeMfQJ4kwUAhCQ==}
@@ -3116,10 +3059,6 @@ packages:
       find-yarn-workspace-root2: 1.2.16
       path-exists: 4.0.0
       which-pm: 2.0.0
-    dev: true
-
-  /pretty-format/3.8.0:
-    resolution: {integrity: sha1-v77VbV6ad2ZF9LH/eqGjrE+jw4U=}
     dev: true
 
   /prismjs/1.28.0:
