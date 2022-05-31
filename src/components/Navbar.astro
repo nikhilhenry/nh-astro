@@ -7,7 +7,7 @@ const links = [{name:"Home",link:"/"},{name:"About",link:"/about"},{name:"Collec
   <h1 class="text-3xl font-semibold tracking-wide">Nikhil Henry</h1>
   <div class="links py-6">
     <ul class="flex justify-between max-w-md">
-      {links.map((l)=><li><a href={l.link}>{l.name}</a></li>)}
+      {links.map((l)=><li><a href={l.link} class={l.link === path ? 'font-bold':'font-normal'}>{l.name}</a></li>)}
     </ul>
   </div>
 </div>
