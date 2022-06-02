@@ -31,6 +31,8 @@
   --color-yellow-rgb: 255, 190, 45;
 }
 
+/* @todo remove uncessary css elements */
+
 :root {
   color-scheme: light;
   --theme-accent: var(--color-orange);
