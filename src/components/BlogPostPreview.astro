@@ -7,7 +7,7 @@ const { post } = Astro.props;
 ---
 
 <article>
-	<img src={post.frontmatter.coverImg} class="max-h-64 w-full object-cover" alt="">
+	<img src={post.frontmatter.coverImg} class="max-h-64 w-full object-cover rounded-lg" alt="">
 	<header class="pt-5">
 		<a href={post.url} class="hover:underline"><h1 class="font-bold text-3xl">{post.frontmatter.title}</h1></a>
 		<p class="text-lg py-2">{post.frontmatter.publishDate}</p>
