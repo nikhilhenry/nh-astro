@@ -1,9 +1,6 @@
 ---
 // Component Imports
-import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
-
+import AuthorCard from "../components/AuthorCard.astro";
 import SiteLayout from "../layouts/index.astro";
 
 // Component Script:
@@ -22,6 +19,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 <SiteLayout>
+	<AuthorCard/>
 		<!-- <BlogHeader />
 			<main class="content">
 				<section class="intro">
