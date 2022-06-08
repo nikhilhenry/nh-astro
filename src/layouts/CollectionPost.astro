@@ -1,0 +1,19 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Navbar from '../components/Navbar.astro';
+import BlogPost from '../components/BlogPost.astro';
+import Hero from '../components/Hero.astro';
+import Container from '../components/Container.astro';
+import PageLayout from './PageLayout.astro';
+
+
+const { content } = Astro.props;
+const { title, subtitle } = content;
+---
+
+<PageLayout>
+  <Hero title={title} subtitle={subtitle}/>
+  <Container>
+  <div class="py-3"></div>
+  </Container>
+</PageLayout>
