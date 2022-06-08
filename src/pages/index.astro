@@ -20,6 +20,6 @@ let allPosts = await Astro.glob('./posts/*.md');
 <SiteLayout>
 	<AuthorCard/>
 	<div class="py-3"></div>
-	<BlogPostList posts={allPosts}/>
+	<BlogPostList posts={allPosts} showTag={true}/>
 </SiteLayout>
 
