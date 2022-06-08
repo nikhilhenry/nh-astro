@@ -3,11 +3,18 @@ export interface Props {
 	post: any;
 }
 
+import { Picture } from "astro-imagetools/components";
 const { post } = Astro.props;
 ---
 
 <article>
-	<img src={post.frontmatter.coverImg} class="max-h-64 w-full object-cover rounded-lg" alt="">
+		<Picture src={post.frontmatter.coverImg}  placeholder="dominantColor" attributes={{
+			img:{
+				class:"max-h-64 w-full object-cover rounded-lg"
+			}
+		}} 
+		layout="fullWidth"
+		alt=""/>
 	<header class="py-4">
 		<a href={post.url} class="hover:underline"><h1 class="font-bold text-3xl">{post.frontmatter.title}</h1></a>
 		<p class="text-lg pt-2">{post.frontmatter.publishDate}</p>
