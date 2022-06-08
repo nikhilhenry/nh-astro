@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import BaseHead from '../components/BaseHead.astro';
+import Container from '../components/Container.astro';
 // Layout Imports
 import Navbar from "../components/Navbar.astro";
 
@@ -18,8 +19,8 @@ let permalink = 'https://example.com/';
     	<Navbar/>
 		</div>
 		<div class="border-b-2 border-slate-300"></div>
-    <div class="container mx-auto px-4 py-6 max-w-5xl">
-      <slot/>
-    </div>
+		<Container>
+			<slot/>
+		</Container>
 	</body>
 </html>
