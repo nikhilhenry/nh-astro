@@ -5,4 +5,5 @@ collectionName: CoffeTalk
 subtitle: Endless curiosity and pondering 
 publishDate: 7 Jun 2022
 description: Here you can find collections of book reports, my thought process and generally what's running in my head outside of tech. Come for the catchy title; stick for the banter. 
+setup: import Layout from '../../layouts/CollectionPost.astro'
 ---
