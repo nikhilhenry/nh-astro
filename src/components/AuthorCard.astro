@@ -1,5 +1,16 @@
+---
+import { Picture } from "astro-imagetools/components";
+
+---
+
 <div class="flex justify-between items-center  mx-auto my-6">
-  <img src="/assets/avatar.jpeg" class="max-h-32 rounded-[35%] max-w-full">
+    <Picture src="/assets/avatar.jpeg" placeholder="dominantColor" attributes={{
+      img:{
+        class:"rounded-[35%] max-h-32 max-w-32"
+      }
+    }}
+    alt=""/>
+  <!-- <img src="/assets/avatar.jpeg" class="max-h-32 rounded-[35%] max-w-full"> -->
   <div class="pl-6">
     <h3 class="font-medium text-xl">Nikhil Henry</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
