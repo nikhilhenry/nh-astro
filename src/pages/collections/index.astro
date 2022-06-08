@@ -1,5 +1,5 @@
 ---
-import BlogPostPreview from "../../components/BlogPostPreview.astro";
+import CollectionPreview from "../../components/CollectionPreview.astro";
 import Container from "../../components/Container.astro";
 import Hero from "../../components/Hero.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
@@ -11,7 +11,7 @@ let allCollections = await Astro.glob('./*.md');
 <Container>
 <div class="py-3"></div>
 <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
-  {allCollections.map(p=><BlogPostPreview post={p}/>)}
+  {allCollections.map(p=><CollectionPreview post={p}/>)}
 </div>
 </Container>
 </PageLayout>
