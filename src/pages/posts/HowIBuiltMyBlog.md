@@ -1,0 +1,27 @@
+---
+title: How I Built my Blog / Portfolio
+coverImg: https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3304&q=80
+description: A hello world sorts of post on how this site came to be and the glorious technology stacks powering it. Bits of tech wisdom splashed in for fun.
+collection: DevDiaries
+publishDate: 7 Jun 2022
+---
+
+# Introduction
+
+As a developer undoubtedly, the most efficient and concise manner to share your work is a dev portfolio. Developer portfolios although synonymous in the tech space are often what leave developers pulling their hair out and for good reason. My first portfolio site was built back in 2018 - _ancient times_ - when I had just started with development. 3 years later, I’m glad to say my skills have vastly improved although the same can’t be said for my site. Embracing discomfort, I set out to try to attempt my site with my newfound passion for modern web development. This blog post is a short form walkthrough of how I went about building and deploying all for the price of nothing!
+
+## 1. Framework
+
+Proclaimed as the bread and butter of any web development project, web frameworks quite often than not make or break your project. I decided to commit to Nuxt ( a Vue based SSR framework) specifically for its server-side rendering and JAMStack capabilities. Nuxt as always is a breeze to work with and for that reason has unofficially become my go-to framework for media-based sites :). Getting started is quite easy and the [Nuxt Docs](https://nuxtjs.org/docs/2.x/get-started/installation) are super developer-friendly.
+
+## 2. Content Management System
+
+A good framework, yes essential to a good developer experience, but a great CMS framework is a web developers dream! JAMStack quickly caught my attention for its simple yet powerful integration with Git but most git-based CMSs lacked the power and flexibility to rival those of self-hosted ones, this certainly presented itself as a roadblock for my ambitious goal of free hosting. However, Nuxt once again came to the rescue. Lucky for me, Nuxt has an excellent powerful git-based CMS: [Nuxt Content](https://content.nuxtjs.org/). A quick look through their docs and you’ll soon realise how miles ahead this system is. All the great features of git-based CMSs plus the dynamic integration of self-hosted ones! Additionally, with its instant search capabilities, I had the foundation to build a site with more functionality and than Wix without the annoying subscription fee.
+
+## 3. Deployment and Hosting
+
+In line with my initial goal of free hosting, my requirements were very specific and niche: auto-deploy, custom domains and server-side endpoints. To my surprise, [Vercel](https://vercel.com/) went above and beyond in satisfying these requirements. Although quite common for those familiar with Next, Vercel supports a host of frameworks for serverless hosting. I was no longer bound by a time-specific docker container or losing my API endpoints for caching. Vercel was definitely the best fit and integrated seamlessly with my git setup and would instantly build, notify and deploy the site. Integrating with Nuxt was instant, however, a neat little community package,[@nuxt/vercel-builder](https://github.com/nuxt/vercel-builder), handles all the configuration so you can just on writing code.
+
+---
+
+Photo by [Christopher Gower](https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
