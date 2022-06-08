@@ -4,6 +4,7 @@ coverImg: https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=Mnwx
 description: A hello world sorts of post on how this site came to be and the glorious technology stacks powering it. Bits of tech wisdom splashed in for fun.
 collection: DevDiaries
 publishDate: 7 Jun 2022
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
 # Introduction
