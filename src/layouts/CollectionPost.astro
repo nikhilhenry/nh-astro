@@ -2,15 +2,22 @@
 import Container from '../components/Container.astro';
 import PageLayout from './PageLayout.astro';
 import HeroImage from '../components/HeroImage.astro';
+import BlogPostPreview from '../components/BlogPostPreview.astro';
+import readingTime from 'reading-time';
+import BlogPostList from '../components/BlogPostList.astro';
 
 
 const { content } = Astro.props;
-const { title, subtitle, coverImg } = content;
+const { title, subtitle, coverImg,collectionName } = content;
+
+const allPosts = await Astro.glob("../pages/posts/*.md")
+let postsFromCollection = allPosts.filter((p)=>p.frontmatter.collection === collectionName)
 ---
 
 <PageLayout>
   <HeroImage title={title} subtitle={subtitle} imgURL={coverImg}/>
   <Container>
   <div class="py-3"></div>
+    <BlogPostList posts={postsFromCollection}/>
   </Container>
 </PageLayout>
