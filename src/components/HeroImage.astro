@@ -1,0 +1,16 @@
+---
+import { BackgroundPicture } from "astro-imagetools/components";
+
+const {title, subtitle, imgURL} = Astro.props;
+---
+<!-- @todo tint the background image -->
+<BackgroundPicture src={imgURL} placeholder="dominantColor" attributes={{
+    img:{
+      class:"h-80"
+    }
+  }}>
+  <div class="h-80 flex flex-col items-center justify-center">
+  <h2 class="text-4xl text-white py-1">{title}</h2>
+  <h4 class="text-2xl text-white">{subtitle}</h4>
+  </div>
+</BackgroundPicture>
