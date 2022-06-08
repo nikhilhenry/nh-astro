@@ -5,7 +5,7 @@ import BlogPost from '../components/BlogPost.astro';
 
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+const { title, description, publishDate, coverImg, permalink, alt } = content;
 ---
 <html lang="en">
 	<head>
@@ -18,7 +18,7 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
 		</div>
 		<div class="border-b-2 border-slate-300"></div>
     <div class="container mx-auto px-4 py-6 max-w-5xl">
-			<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+			<BlogPost {title} {coverImg} {publishDate} {alt}>
 				<slot />
 			</BlogPost>
     </div>
