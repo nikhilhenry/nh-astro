@@ -11,7 +11,7 @@ export interface Props {
 const { title, coverImg, publishDate,alt } = Astro.props;
 ---
 <div class="layout">
-	<article class="prose lg:prose-xl">
+	<article class="prose lg:prose-xl mx-auto">
 		<div>
 			<header>
 				{coverImg && <Picture src={coverImg} alt={alt}/>}
