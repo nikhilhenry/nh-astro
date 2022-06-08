@@ -6,11 +6,13 @@ specifiers:
   astro: ^1.0.0-beta.37
   astro-imagetools: ^0.6.9
   preact: ^10.7.2
+  reading-time: ^1.5.0
   svelte: ^3.46.4
 
 dependencies:
   astro-imagetools: 0.6.9_astro@1.0.0-beta.37
   preact: 10.7.2
+  reading-time: 1.5.0
 
 devDependencies:
   '@astrojs/svelte': 0.1.3_svelte@3.48.0
@@ -3543,6 +3545,10 @@ packages:
     dependencies:
       picomatch: 2.3.1
     dev: true
+
+  /reading-time/1.5.0:
+    resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
+    dev: false
 
   /recast/0.20.5:
     resolution: {integrity: sha512-E5qICoPoNL4yU0H0NoBDntNB0Q5oMSNh9usFctYniLBluTthi3RsQVBXIJNbApOlvSwW/RGxIuokPcAc59J5fQ==}
