@@ -5,6 +5,7 @@ description: A Cal Newport's, So Good They Can't Ignore You, book report.
 collection: CoffeTalk
 publishDate: 7 Jun 2022
 setup: import Layout from '../../layouts/BlogPost.astro'
+alt: an image
 ---
 How does one achieve success in life? A question heavily discussed today amongst anxious teens, weary young adults and 9 to 5 hustlers. For the majority of the population, the answer has always been *follow your passion.* This idea of passion has been contemplated, commercialised and convoluted by our society. Upon first glance, the hypothesis seems fairly reasonable - do what you love - but for some of us, myself included, doing what you love could translate into various forms not all necessarily leading to satisfaction or fulfilment. I too might have fallen prey to this pandora's box had it not been for timely introduction to Cal Newport's work, So Good They Can't Ignore You.   
 
