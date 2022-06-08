@@ -1,7 +1,11 @@
 ---
-import SiteLayout from "../../layouts/index.astro";
+import Container from "../../components/Container.astro";
+import Hero from "../../components/Hero.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
 ---
-
-<SiteLayout>
-<h1>collections page</h1>
-</SiteLayout>
+<PageLayout>
+<Hero title="📝 Collections" subtitle="Rabit holes of thought..."/>
+<Container>
+<div>hello collectoins!</div>
+</Container>
+</PageLayout>
