@@ -4,6 +4,8 @@ import AuthorCard from "../components/AuthorCard.astro";
 import BlogPostPreview from "../components/BlogPostPreview.astro";
 import SiteLayout from "../layouts/index.astro";
 
+import readingTime from "reading-time"
+
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
@@ -14,8 +16,8 @@ let description = 'The perfect starter for your perfect blog.';
 // Data Fetching: List all Markdown posts in the repo.
 
 let allPosts = await Astro.glob('./posts/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
+let computedPosts = allPosts.map(p=>{ return {time:readingTime(p.file).text,...p}})
+computedPosts = computedPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf())
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -23,7 +25,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 	<AuthorCard/>
 	<div class="py-3"></div>
 	<div class="grid gap-6 grid-cols-1 md:grid-cols-2">
-		{allPosts.map(p=><BlogPostPreview post={p}/>)}
+		{computedPosts.map(p=><BlogPostPreview post={p}/>)}
 	</div>
 </SiteLayout>
 
