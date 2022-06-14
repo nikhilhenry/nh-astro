@@ -25,7 +25,7 @@ const { post,showTag } = Astro.props;
 			</svg>
 			{post.time}
 		</span>
-		{showTag && <a class="text-sky-400" href={`/collections/${post.frontmatter.collection}`}>#{post.frontmatter.collection}</a>}
+		{showTag && post.frontmatter.collection && <a class="text-sky-400" href={`/collections/${post.frontmatter.collection}`}>#{post.frontmatter.collection}</a>}
 	</div>
 	
 	</header>
