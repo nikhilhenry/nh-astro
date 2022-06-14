@@ -9,8 +9,8 @@ const links = [{name:"Home",link:"/"},{name:"About",link:"/about/"},{name:"Colle
   <h1 class="text-3xl font-semibold tracking-wide">Nikhil Henry</h1>
   <div class="links py-6 flex justify-between">
     <!-- nav links -->
-    <ul class="flex max-w-md">
-      {links.map((l)=><li class={l.link === path ? 'bg-slate-200 first:!pl-4 ':''}>
+    <ul class="flex max-w-md text-gray-800 dark:text-gray-300">
+      {links.map((l)=><li class={l.link === path ? 'bg-slate-200 dark:bg-slate-700 first:!pl-4 ':'hover:bg-slate-200 dark:hover:bg-slate-700 '}>
         <a class={l.link === path ? 'font-bold':'font-light'}
         href={l.link}>
         {l.name}
@@ -30,7 +30,7 @@ const links = [{name:"Home",link:"/"},{name:"About",link:"/about/"},{name:"Colle
 
 <style>
   li{
-    @apply px-4 py-1 rounded-md hover:bg-slate-200 first:pl-0 text-gray-800
+    @apply px-4 py-1 rounded-md first:pl-0 
   }
   a{
     @apply no-underline
