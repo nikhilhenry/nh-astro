@@ -13,7 +13,7 @@ const { title, coverImg, publishDate,alt } = Astro.props;
 ---
 <div class="layout">
 	<ProseContent>
-		{coverImg && <Picture src={coverImg} alt={alt}/>}
+		{coverImg && <Picture src={coverImg} alt={alt} attributes={{img:{ class:"rounded-lg"}}}/>}
 		<div>
 			<header>
 				<p class="publish-date">{publishDate}</p>
