@@ -9,6 +9,7 @@ specifiers:
   preact: ^10.7.2
   reading-time: ^1.5.0
   svelte: ^3.46.4
+  tailwindcss: ^3.1.2
 
 dependencies:
   astro-imagetools: 0.6.9_astro@1.0.0-beta.37
@@ -18,9 +19,10 @@ dependencies:
 devDependencies:
   '@astrojs/svelte': 0.1.3_svelte@3.48.0
   '@astrojs/tailwind': 0.2.1
-  '@tailwindcss/typography': 0.5.2
+  '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.2
   astro: 1.0.0-beta.37
   svelte: 3.48.0
+  tailwindcss: 3.1.2
 
 packages:
 
@@ -125,7 +127,7 @@ packages:
       '@proload/core': 0.3.2
       autoprefixer: 10.4.7_postcss@8.4.14
       postcss: 8.4.14
-      tailwindcss: 3.0.24
+      tailwindcss: 3.1.2
     transitivePeerDependencies:
       - ts-node
     dev: true
@@ -817,7 +819,7 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/typography/0.5.2:
+  /@tailwindcss/typography/0.5.2_tailwindcss@3.1.2:
     resolution: {integrity: sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -825,6 +827,7 @@ packages:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
+      tailwindcss: 3.1.2
     dev: true
 
   /@tokenizer/token/0.3.0:
@@ -3364,6 +3367,11 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
+  /pify/2.3.0:
+    resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
   /pify/4.0.1:
     resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
     engines: {node: '>=6'}
@@ -3385,6 +3393,18 @@ packages:
     resolution: {integrity: sha512-NCrCHhWmnQklfH4MtJMRjZ2a8c80qXeMlQMv2uVp9ISJMTt562SbGd6n2oq0PaPgKm7Z6pL9E2UlLIhC+SHL3w==}
     engines: {node: '>=4.0.0'}
     dev: false
+
+  /postcss-import/14.1.0_postcss@8.4.14:
+    resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      postcss: ^8.0.0
+    dependencies:
+      postcss: 8.4.14
+      postcss-value-parser: 4.2.0
+      read-cache: 1.0.0
+      resolve: 1.22.0
+    dev: true
 
   /postcss-js/4.0.0_postcss@8.4.14:
     resolution: {integrity: sha512-77QESFBwgX4irogGVPgQ5s07vLvFqWr228qZY+w6lW599cRlK/HmnlivnnVUxkjHnCu4J16PDMHcH+e+2HbvTQ==}
@@ -3547,6 +3567,12 @@ packages:
       strip-json-comments: 2.0.1
     dev: false
     optional: true
+
+  /read-cache/1.0.0:
+    resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
+    dependencies:
+      pify: 2.3.0
+    dev: true
 
   /readable-stream/3.6.0:
     resolution: {integrity: sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==}
@@ -4065,8 +4091,8 @@ packages:
       svelte: 3.48.0
       typescript: 4.6.4
 
-  /tailwindcss/3.0.24:
-    resolution: {integrity: sha512-H3uMmZNWzG6aqmg9q07ZIRNIawoiEcNFKDfL+YzOPuPsXuDXxJxB9icqzLgdzKNwjG3SAro2h9SYav8ewXNgig==}
+  /tailwindcss/3.1.2:
+    resolution: {integrity: sha512-yJ6L5s1U5AeS5g7HHy212zdQfjwD426FBfm59pet/JsyneuZuD4C2W7PpJEg4ppisiB21uLqtNagv8KXury3+Q==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
@@ -4084,6 +4110,7 @@ packages:
       object-hash: 3.0.0
       picocolors: 1.0.0
       postcss: 8.4.14
+      postcss-import: 14.1.0_postcss@8.4.14
       postcss-js: 4.0.0_postcss@8.4.14
       postcss-load-config: 3.1.4_postcss@8.4.14
       postcss-nested: 5.0.6_postcss@8.4.14
@@ -4290,7 +4317,7 @@ packages:
     dev: false
 
   /util-deprecate/1.0.2:
-    resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
+    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
   /util/0.12.4:
     resolution: {integrity: sha512-bxZ9qtSlGUWSOy9Qa9Xgk11kSslpuZwaxCg4sNIDj6FLucDab2JxnHwyNTCpHMtK1MjoQiWQ6DiUMZYbSrO+Sw==}
