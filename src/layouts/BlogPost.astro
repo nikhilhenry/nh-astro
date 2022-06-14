@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Navbar from '../components/Navbar.astro';
 import BlogPost from '../components/BlogPost.astro';
+import WrapperWithNav from '../components/WrapperWithNav.astro';
 
 
 const { content } = Astro.props;
@@ -13,14 +14,13 @@ const { title, description, publishDate, coverImg, permalink, alt } = content;
 	</head>
 
 	<body>
-		<div class="container mx-auto px-4">
-    	<Navbar/>
-		</div>
+		<WrapperWithNav>
 		<div class="border-b-2 border-slate-300"></div>
     <div class="container mx-auto px-4 py-6 max-w-5xl">
 			<BlogPost {title} {coverImg} {publishDate} {alt}>
 				<slot />
 			</BlogPost>
     </div>
+	</WrapperWithNav>
 	</body>
 </html>

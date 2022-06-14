@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Container from '../components/Container.astro';
 // Layout Imports
 import Navbar from "../components/Navbar.astro";
+import WrapperWithNav from '../components/WrapperWithNav.astro';
 
 let title = 'Nikhil Henry';
 let description = 'The perfect starter for your perfect blog.';
@@ -15,14 +16,11 @@ let permalink = 'https://example.com/';
 	</head>
 
 	<body>
-		<div class="bg-gray-50 dark:bg-gray-900 dark:text-white ">
-			<div class="container mx-auto px-4">
-				<Navbar/>
-			</div>
+		<WrapperWithNav>
 			<div class="border-b-2 border-slate-300 dark:border-slate-600"></div>
 			<Container>
 				<slot/>
 			</Container>
-		</div>
+		</WrapperWithNav>
 	</body>
 </html>
