@@ -1,14 +1,18 @@
 ---
-import CollectionPreview from "../../components/CollectionPreview.astro";
 import Container from "../../components/Container.astro";
 import Hero from "../../components/Hero.astro";
+import ProjectPostPreview from "../../components/ProjectPostPreview.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
+
+let allProjects = await Astro.glob('./*.md');
 
 ---
 <PageLayout>
 <Hero title="🛠️ Projects" gradient="bg-gradient-to-r from-sky-400 to-blue-500" subtitle="What I've been working on"/>
 <Container>
 <div class="py-3"></div>
-
+<ul>
+  {allProjects.map(p=><li><ProjectPostPreview post={p}/></li>)}
+</ul>
 </Container>
 </PageLayout>
