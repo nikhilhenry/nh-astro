@@ -2,11 +2,12 @@
 import { Picture } from "astro-imagetools/components";
 
 const {title, description,coverImg, source, live } = Astro.props.post.frontmatter
+const postLink = Astro.props.post.url
 ---
-
-<article class="bg-gray-200 dark:bg-gray-800 shadow-md hover:outline outline-3 outline-offset-4 outline-slate-800 dark:outline-stone-50 rounded-lg w-full pl-6 flex justify-between">
+<div class="w-full">
+<article class="w-full bg-gray-200 dark:bg-gray-800 shadow-md hover:outline outline-3 outline-offset-4 outline-slate-800 dark:outline-stone-50 rounded-lg pl-6 flex justify-between">
   <main class="py-4 max-w-sm flex flex-col pr-3">
-    <h2 class="text-2xl font-semibold">{title}</h2>
+    <a href={postLink} class="hover:underline"><h2 class="text-2xl font-semibold">{title}</h2></a>
     <p class="text-slate-500 dark:text-slate-400 mt-3">{description}</p>
     <div class="flex-grow"></div>
     <div class="pt-3">
@@ -22,11 +23,13 @@ const {title, description,coverImg, source, live } = Astro.props.post.frontmatte
   }} 
   layout="fullWidth"
   alt=""/>
-</div>
+  </div>
 </article>
+</div>
+
 
 <style>
-  a svg{
+  svg{
     @apply w-10 h-max fill-slate-500 hover:fill-slate-600 dark:hover:fill-slate-400
   }
 </style>
