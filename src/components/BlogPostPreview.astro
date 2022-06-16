@@ -3,53 +3,33 @@ export interface Props {
 	post: any;
 }
 
-const { post } = Astro.props;
+import { Picture } from "astro-imagetools/components";
+const { post,showTag } = Astro.props;
 ---
 
-<article class="post-preview">
-	<header>
-		<p class="publish-date">{post.frontmatter.publishDate}</p>
-		<a href={post.url}><h1 class="title">{post.frontmatter.title}</h1></a>
+<article>
+		<Picture src={post.frontmatter.coverImg}  placeholder="dominantColor" attributes={{
+			img:{
+				class:"max-h-64 w-full object-cover rounded-lg"
+			}
+		}} 
+		layout="fullWidth"
+		alt=""/>
+	<header class="py-4">
+		<a href={post.url} class="hover:underline"><h1 class="font-bold text-3xl">{post.frontmatter.title}</h1></a>
+		<div class="flex items-center justify-start pt-2 text-lg">
+		<p>{post.frontmatter.publishDate} </p>
+		<span class="text-zinc-500 dark:text-zinc-300 px-3">
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20" fill="currentColor">
+				<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+			</svg>
+			{post.time}
+		</span>
+		{showTag && post.frontmatter.collection && <a class="text-sky-400" href={`/collections/${post.frontmatter.collection}`}>#{post.frontmatter.collection}</a>}
+	</div>
+	
 	</header>
+
 	<p>{post.frontmatter.description}</p>
-	<a href={post.url}>Read more</a>
+	
 </article>
-
-<style>
-	.content :global(main > * + *) {
-		margin-top: 1rem;
-	}
-
-	.post-preview {
-		padding-bottom: 2rem;
-		margin-bottom: 2rem;
-		border-bottom: 4px solid var(--theme-divider);
-	}
-
-	header {
-		align-items: flex-start;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding-bottom: 2rem;
-		text-align: left;
-	}
-
-	.title,
-	.author,
-	.publish-date {
-		margin: 0;
-	}
-
-	.publish-date,
-	.author {
-		font-size: 1.25rem;
-		color: var(--theme-text-lighter);
-	}
-
-	.title {
-		font-size: 2.25rem;
-		font-weight: 700;
-		color: var(--theme-text);
-	}
-</style>

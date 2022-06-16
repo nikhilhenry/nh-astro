@@ -1,0 +1,25 @@
+---
+import Container from "../../components/Container.astro";
+import Hero from "../../components/Hero.astro";
+import ProjectPostPreview from "../../components/ProjectPostPreview.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+
+let allProjects = await Astro.glob('./*.md');
+
+---
+<PageLayout>
+<Hero title="🛠️ Projects" gradient="bg-gradient-to-r from-sky-400 to-blue-500" subtitle="What I've been working on"/>
+<Container>
+<div class="py-3"></div>
+<ul>
+  {allProjects.map(p=><li class="mb-10"><ProjectPostPreview post={p}/></li>)}
+  <li>
+    <div class="bg-gray-200  dark:bg-gray-800 rounded-lg text-center py-5">
+      <h2 class="text-xl font-bold">and</h2>
+      <h3 class="text-slate-500 dark:text-slate-400">Designed and Developed</h3>
+      <h2 class="font-bold text-xl">this site.</h2>
+    </div>
+  </li>
+</ul>
+</Container>
+</PageLayout>

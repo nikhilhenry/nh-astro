@@ -1,0 +1,12 @@
+---
+import SiteLayout from "../layouts/index.astro";
+import ContactForm from "../components/ContactForm.svelte"
+---
+<SiteLayout>
+<div class="max-w-md mx-auto">
+  <h1 class="text-3xl">Send me an email</h1>
+    <div class="mt-6">
+      <ContactForm client:load/>
+    </div>
+  </div>
+</SiteLayout>

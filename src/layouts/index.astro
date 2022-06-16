@@ -1,0 +1,25 @@
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import Container from '../components/Container.astro';
+// Layout Imports
+import WrapperWithNav from '../components/WrapperWithNav.astro';
+
+let title = 'Nikhil Henry';
+let description = 'The perfect starter for your perfect blog.';
+let permalink = 'https://example.com/';
+---
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} permalink={permalink} />
+	</head>
+
+	<body>
+		<WrapperWithNav>
+			<div class="border-b-2 border-slate-300 dark:border-slate-600"></div>
+			<Container>
+				<slot/>
+			</Container>
+		</WrapperWithNav>
+	</body>
+</html>
