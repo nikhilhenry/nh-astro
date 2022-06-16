@@ -20,5 +20,8 @@ module.exports = {
       primarySecondaryDark: colors.purple[500],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  daisyui: {
+    prefix: "daisy",
+  },
 };
