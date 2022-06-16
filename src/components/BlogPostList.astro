@@ -4,7 +4,7 @@ import BlogPostPreview from "./BlogPostPreview.astro";
 
 const {posts,showTag} = Astro.props;
 let computedPosts = posts.map(p=>{ return {time:readingTime(p.file).text,...p}})
-computedPosts = computedPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf())
+computedPosts = computedPosts.sort((a, b) => new Date(a.frontmatter.publishDate).valueOf() - new Date(b.frontmatter.publishDate).valueOf())
 ---
 <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
   {computedPosts.map(p=><BlogPostPreview post={p} {showTag}/>)}
