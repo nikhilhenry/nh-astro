@@ -1,5 +1,6 @@
 ---
 import Navbar from "./Navbar.astro";
+import Footer from "./Footer.astro";
 ---
 
 <div class="bg-gray-50 dark:bg-gray-900 dark:text-white ">
@@ -7,4 +8,6 @@ import Navbar from "./Navbar.astro";
     <Navbar/>
   </div>
   <slot/>
+  <div class="border-b-2 border-slate-300 dark:border-slate-600 mt-5"></div>
+  <Footer/>
 </div>
