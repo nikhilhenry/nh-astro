@@ -7,6 +7,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "nikhilhenry.vercel.app",
+  site: "https://nikhilhenry.vercel.app",
   integrations: [svelte(), tailwind(), astroImageTools, sitemap()],
 });
