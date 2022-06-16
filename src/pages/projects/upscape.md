@@ -6,9 +6,6 @@ description: What do you do when you can't find the perfect todo app? Build one 
 publishDate: 7 Jun 2022
 source: https://github.com/nikhilhenry/upscape
 live: https://upscape-nikhil.herokuapp.com
-setup: |
- import Layout from "../../Layouts/BlogPost.astro"
- import ProjectLinks from "../../components/ProjectLinks.astro"
 ---
 <div class="not-prose">
 <ProjectLinks source={frontmatter.source} live={frontmatter.live}></ProjectLinks>
