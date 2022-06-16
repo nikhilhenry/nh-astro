@@ -1,6 +1,6 @@
 ---
 setup: |
- import Layout from "../../Layouts/BlogPost.astro"
+ import Layout from "../../layouts/BlogPost.astro"
  import ProjectLinks from "../../components/ProjectLinks.astro"
 title: Upscape
 coverImg: https://images.unsplash.com/photo-1623157879673-859a2d8d4522?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80
