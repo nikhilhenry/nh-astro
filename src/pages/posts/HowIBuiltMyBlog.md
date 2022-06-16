@@ -3,7 +3,7 @@ title: How I Built my Blog / Portfolio
 coverImg: https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3304&q=80
 description: A hello world sorts of post on how this site came to be and the glorious technology stacks powering it. Bits of tech wisdom splashed in for fun.
 collection: DevDiaries
-publishDate: 7 Jun 2022
+publishDate: 7 Jun 2021
 alt: an image
 setup: import Layout from '../../layouts/BlogPost.astro'
 ---

@@ -3,7 +3,7 @@ title: Why I Won't Be Following my Passion
 coverImg: https://images.unsplash.com/photo-1421218108559-eb1ff78357f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3264&q=80
 description: A Cal Newport's, So Good They Can't Ignore You, book report.
 collection: CoffeTalk
-publishDate: 7 Jun 2022
+publishDate: 1 Aug 2021
 setup: import Layout from '../../layouts/BlogPost.astro'
 alt: an image
 ---
