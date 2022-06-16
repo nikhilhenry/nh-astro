@@ -9,8 +9,3 @@ class handler(BaseHTTPRequestHandler):
     self.end_headers()
     self.wfile.write(str("hello world").encode())
     return
-
-  def do_POST(self):
-    self.send_response(200,self.bo)
-    self.end_headers()
-    return
