@@ -8,23 +8,24 @@ setup: |
 
 ## 👋 Howdy!
 
-I'm **Nikhil Henry** an IBDP student and tech enthusiast. Welcome to my little place on the internet. This is where you can usually find my thoughts running wild on my current learnings and past experiences.
+I'm **Nikhil Henry** a self-taught software developer and tech enthusiast. Welcome to my little place on the internet. This is where you can usually find my thoughts running wild on my current learnings and past experiences.
 
 ## Presently
 
-1. Pursuing the IBDP program with a focus on the sciences and business.
+1. Working on my final project for Stanford's CS193p iOS Development Course.
 2. Developing my mental health SaaS product [Sunny Whale](https://sunnywhale.in).
-3. Navigating the complex realm of Decentralised Applications.
+3. Exploring my ideal tech stack 🔍.
 
 ## Speciliasations
 
 1. Full Stack web development with [Vue 3](https://v3.vuejs.org/) and [Go](https://golang.org) / [NodeJS](https://nodejs.org).
-2. CI/CD DevOps with Docker on [GitLab](https://gitlab.com) and [Github](https://github.com).
-3. 3D design and engineering with Fusion 360 and the glorious Raspberry Pi.
+2. iOS development using Swift and SwiftUI.
+3. CI/CD DevOps with Docker on [GitLab](https://gitlab.com) and [Github](https://github.com).
+4. 3D design and engineering with Fusion 360 and the glorious Raspberry Pi.
 
 ## Connect with me
 
-- 👨‍💻 Github
-- 💼 LinkedIn
+- [👨‍💻 Github](https://github.com/nikhilhenry)
+- [💼 LinkedIn](https://www.linkedin.com/in/nikhil-henry-07b79a135/")
 
 </ProseContent>
