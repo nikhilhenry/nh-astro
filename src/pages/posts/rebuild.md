@@ -1,7 +1,7 @@
 ---
 title: Why & How I rebuilt this site
 coverImg: /assets/blog/lighthouse.png
-description: Another hello world post, but built with Astro this time!
+description: Another hello world post, but built with Astro 🚀 this time!
 collection: DevDiaries
 publishDate: 18 Jun 2022
 alt: an image
