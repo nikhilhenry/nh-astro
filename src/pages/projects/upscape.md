@@ -3,58 +3,50 @@ setup: |
  import Layout from "../../layouts/BlogPost.astro"
  import ProjectLinks from "../../components/ProjectLinks.astro"
 title: Upscape
-coverImg: https://images.unsplash.com/photo-1623157879673-859a2d8d4522?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80
+coverImg: /assets/blog/upscape.png
 alt: an image
 description: What do you do when you can't find the perfect todo app? Build one yourself!
-publishDate: 7 Jun 2022
+publishDate: 6 Apr 2022
 source: https://github.com/nikhilhenry/upscape
 live: https://upscape-nikhil.herokuapp.com
 ---
 <div class="not-prose">
 <ProjectLinks source={frontmatter.source} live={frontmatter.live}></ProjectLinks>
 </div>
-### The App for Do-ers
 
-Built for productivity enthusiasts.
+## About
+A productivity app built for *Do-ers*. Also since I wanted experiment with golang and was never happy with any other 
+todo app since they were either too minimal or too complex. Upscape implements time-blocking and ahead planning productivity techniques to ensure you stay productive throughout the day. 
 
-> Latest release version: **January 2022 / Production v2.0.4**
-
-## Stack
-
+## Tech Stack
 - [Gin](https://gin-gonic.com/) backend
 - [Go](https://golang.org) powered backend
 - [MongoDB Atlas](https://cloud.mongodb.com/v2/5ea9386c468f9c5f315a6535#metrics/replicaSet/5ec2597012bfec1f1f998f60/explorer) (DaaS)
-- [Vue.js V3](https://v3.vuejs.org/) Client SPA
+- [Vue.js V3](https://v3.vuejs.org/) Client SPA + [Typescript](https://www.typescriptlang.org/)
 - [JWT](jwt.io) for auth
 - [Heroku](https://dashboard.heroku.com/apps/carenikhil) for PaaS
 - [Github](https://github.com/nikhilhenry/) CI/CD
 - [Tailwind](https://tailwind.com) CSS Utility Classes
+## Features
+### Daily Highlights
+Ping a reminder to help you focus on the most important ask of the day. Stay focused, stay sharp and stay resilient.
+![Daily Highlight](../../../public/assets/blog/upscape-1.png)
 
-## Development
+### Plan Ahead
 
-### Installing dependencies
+Create tasks for tomorrow today!
+![Tomorrow Tasks](../../../public/assets/blog/upscape-5.png)
 
-```
-got get
-cd client
-npm ci
-```
+### Hue Based Hour Intensities
+Visual indicators to let you know the work intensity throughout the day.
+![medium intensity](../../../public/assets/blog/upscape-2.png)
+![max intensity](../../../public/assets/blog/upscape-3.png)
+![normal intensity](../../../public/assets/blog/upscape-4.png)
 
-### Running server
+## Challenges
 
-```
-make
-cd client
-npm run serve
-```
+This was my hands-on project with golang apart from tutorials. The most complicated aspect of building the back-end was the intergation with MongoDB. Unfortunately, Go does not have a convienient ORM for MongoDB like [mongoose](https://mongoosejs.com/docs/) for javascript. Instead, I ended up writing all the queries myself using the [official database drive](https://www.mongodb.com/docs/drivers/go/current/). Apart from the minor greviance, building the API using Gin was actually pretty simple and its framework structure was pretty intutive although albiet not as simple as [express](https://expressjs.com/).
 
-Server running on port 5000 with DB collection. Client running on port 8080 with **local** API connection.
 
-## Production
 
-Use any PaaS system with support for **Docker** containers
 
-1. Fork Project
-2. Intialise GitHub Secrets with required build arguments from docker file
-3. Create Heroku Project
-4. Run workflow manually
