@@ -6,7 +6,7 @@ title: Upscape
 coverImg: /assets/blog/upscape.png
 alt: an image
 description: What do you do when you can't find the perfect todo app? Build one yourself!
-publishDate: 6 Apr 2022
+publishDate: 5 Dec 2021
 source: https://github.com/nikhilhenry/upscape
 live: https://upscape-nikhil.herokuapp.com
 ---

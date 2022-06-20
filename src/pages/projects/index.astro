@@ -4,7 +4,8 @@ import Hero from "../../components/Hero.astro";
 import ProjectPostPreview from "../../components/ProjectPostPreview.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
 
-let allProjects = await Astro.glob('./*.md');
+const allProjects = (await Astro.glob('./*.md'))
+  .sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
 ---
 <PageLayout>
