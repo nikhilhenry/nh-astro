@@ -4,18 +4,7 @@ import AuthorCard from "../components/AuthorCard.astro";
 import SiteLayout from "../layouts/index.astro";
 import BlogPostList from "../components/BlogPostList.astro";
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'Example Blog';
-let description = 'The perfect starter for your perfect blog.';
-
-// Data Fetching: List all Markdown posts in the repo.
-
 let allPosts = await Astro.glob('./posts/*.md');
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 <SiteLayout>
 	<AuthorCard/>
