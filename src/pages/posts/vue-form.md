@@ -1,5 +1,5 @@
 ---
-title: How to build a multistep form in Vue
+title: How to build a multi-step form in Vue
 coverImg: /assets/blog/form.png
 description: Another hello world post, but built with Astro 🚀 this time!
 collection: DevDiaries
@@ -33,8 +33,33 @@ module.exports = {
   plugins: [require("daisyui")],
 }
 ```
+Forms and data input are always an essential aspect of any web application. At times, the web app may require to present the user with a series of inputs. Multi-step forms help achieve this goal with a stellar and distinct user experience. Today we'll be building a multi-step form in vue using typescript and [Tailwindcss](https://tailwindcss.com) and [daisyUI](https://daisyui.com), both of which compile down to plain css hence avoiding any increase in bundle size. 
+
+You can checkout the finished product [here](https://x2ryog.sse.codesandbox.io/) or take a look at the source code [here](https://github.com/nikhilhenry/vue-multistepform).
+
+## Setup
+The project was scaffolded using [vite](https://vitejs.dev) with the vue-ts template. Run the command below and select vue-ts as the template from the vue option.
+
+```bash
+npm create vite
+```
+
+Installation instruction for tailwindcss can be found [here](https://tailwindcss.com/docs/guides/vite). *Their docs are brilliant, so you will have a better time over there 😇*.
+
+To install daisyUI run:
+```
+npm i daisyUI --save-dev
+```
+
+Then add daisyUI to your tailwind.config.js files:
+```javascript
+module.exports = {
+  //...
+  plugins: [require("daisyui")],
+}
+```
 ## Form steps
-Each section of the multi-step form is its own indivdual component. This allows the implementation to be modular so that the individual elements can manage their own data binding and logic whilst limiting concern from other components.
+Each section of the multi-step form is its own individual component. This allows the implementation to be modular so that the individual elements can manage their own data binding and logic whilst limiting concern from other components.
 
 Below are a few sample steps (styled with tailwind and daisyUI), but feel free to experiment with your own. 
 1. Step 1 → ./src/components/Step1.vue
@@ -92,7 +117,7 @@ Below are a few sample steps (styled with tailwind and daisyUI), but feel free t
 
 ## Displaying steps and step progress
 
-This is where the powerfull class styles of daisyUI come in handly to elegantly style the progress indicator with a single class definition. 
+This is where the powerful class styles of daisyUI come in handy to elegantly style the progress indicator with a single class definition. 
 
 <!-- template file -->
 *./src/components/MultiStepForm.vue* → template section
@@ -126,7 +151,7 @@ Now, we will import our new component into the *App.vue* file
 ```vue
 <template>
   <div class="flex flex-col items-center justify-center h-screen">
-    <MultiStepForm :steps="['Personal information 👶','Series 📺','Feeback 🌟']"/>
+    <MultiStepForm :steps="['Personal information 👶','Series 📺','Feedback 🌟']"/>
   </div>
 </template>
 
@@ -148,14 +173,14 @@ We can start accepting vue components as props for our *MultiStepForm* component
 import Step1 from "./Step1.vue"
 // ...
 const props = defineProps<{
-    forms:typeof Step1[], // infering the component type of one of our steps 
+    forms:typeof Step1[], // inferring the component type of one of our steps 
     steps:string[],
 }>()
 </script>
 ```
 ## Rendering components within the form
 
-We can now render the components we have recieved as props using vue's special built-in element: [component](https://vuejs.org/api/built-in-special-elements.html#component).
+We can now render the components we have received as props using vue's special built-in element: [component](https://vuejs.org/api/built-in-special-elements.html#component).
 
 *./src/components/MultiStepForm.vue* → template section
 ```vue
@@ -222,7 +247,7 @@ const formAction = () => {
 ```vue
 <template>
   <div class="flex flex-col items-center justify-center h-screen">
-    <MultiStepForm :forms="forms" :steps="['Personal information 👶','Series 📺','Feeback 🌟']" 
+    <MultiStepForm :forms="forms" :steps="['Personal information 👶','Series 📺','Feedback 🌟']" 
       :submit-action="submitAction"
     />
   </div>
@@ -241,7 +266,7 @@ const formAction = () => {
 
 ## Summary
 
-There we have it, a typesafe implementation of a multi-step form in vue with an elegant design and UX through tailwindcss and daisyUI. For a quick reference you can also checkout the codesandbox below 👇.
+There we have it, a type-safe implementation of a multi-step form in vue with an elegant design and UX through tailwindcss and daisyUI. For a quick reference you can also checkout the codesandbox below 👇.
 
 <iframe src="https://codesandbox.io/embed/eloquent-snyder-x2ryog?fontsize=14&hidenavigation=1&theme=dark&view=preview"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
@@ -250,8 +275,4 @@ There we have it, a typesafe implementation of a multi-step form in vue with an 
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
 
-You can find the source code on [github](https://github.com/nikhilhenry/vue-multistepform). Be sure to give the project a start if you find this tutorial helpful!
-
-Thanks for stopping by
-
--Nikhil
+You can find the source code on [GitHub](https://github.com/nikhilhenry/vue-multistepform). Be sure to give the project a start if you find this tutorial helpful!
