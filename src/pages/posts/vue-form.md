@@ -19,31 +19,6 @@ The project was scaffolded using [vite](https://vitejs.dev) with the vue-ts temp
 npm create vite
 ```
 
-Installation instruction for tailwindcss can be found [here](https://tailwindcss.com/docs/guides/vite). *They're docs are brilliant, so you will have a better time over there 😇*.
-
-To install daisyUI run:
-```
-npm i daisyUI --save-dev
-```
-
-Then add daisyUI to your tailwind.config.js files:
-```javascript
-module.exports = {
-  //...
-  plugins: [require("daisyui")],
-}
-```
-Forms and data input are always an essential aspect of any web application. At times, the web app may require to present the user with a series of inputs. Multi-step forms help achieve this goal with a stellar and distinct user experience. Today we'll be building a multi-step form in vue using typescript and [Tailwindcss](https://tailwindcss.com) and [daisyUI](https://daisyui.com), both of which compile down to plain css hence avoiding any increase in bundle size. 
-
-You can checkout the finished product [here](https://x2ryog.sse.codesandbox.io/) or take a look at the source code [here](https://github.com/nikhilhenry/vue-multistepform).
-
-## Setup
-The project was scaffolded using [vite](https://vitejs.dev) with the vue-ts template. Run the command below and select vue-ts as the template from the vue option.
-
-```bash
-npm create vite
-```
-
 Installation instruction for tailwindcss can be found [here](https://tailwindcss.com/docs/guides/vite). *Their docs are brilliant, so you will have a better time over there 😇*.
 
 To install daisyUI run:
