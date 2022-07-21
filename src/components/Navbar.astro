@@ -10,8 +10,8 @@ const links = [{name:"Home",link:"/"},{name:"About",link:"/about/"},{name:"Colle
   <div class="links py-6 flex justify-between">
     <!-- nav links -->
     <ul class="flex max-w-md text-gray-800 dark:text-gray-300">
-      {links.map((l)=><li class={l.link === path ? 'bg-slate-200 dark:bg-slate-700 first:!pl-4 ':'hover:bg-slate-200 dark:hover:bg-slate-700 '}>
-        <a class={l.link === path ? 'font-bold':'font-light'}
+      {links.map((l)=><li class={l.link === path ? 'bg-slate-200 dark:bg-slate-700 first:!pl-4 first:hover:!ml-0':'hover:bg-slate-200 dark:hover:bg-slate-700 '}>
+        <a class={l.link === path ? 'font-bold ':'font-light'}
         href={l.link}>
         {l.name}
         </a>
