@@ -16,7 +16,7 @@ I'm **Nikhil Henry** a self-taught software developer and tech enthusiast. Welco
 2. Developing my mental health SaaS product [Sunny Whale](https://sunnywhale.in).
 3. Exploring my ideal tech stack 🔍.
 
-## Speciliasations
+## Specialisations 
 
 1. Full Stack web development with [Vue 3](https://v3.vuejs.org/) and [Go](https://golang.org) / [NodeJS](https://nodejs.org).
 2. iOS development using Swift and SwiftUI.
