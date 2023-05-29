@@ -5,7 +5,7 @@ import AuthorCard from "../components/AuthorCard.astro";
 import SiteLayout from "../layouts/index.astro";
 import BlogPostList from "../components/BlogPostList.astro";
 
-let allPosts = await getCollection('posts');
+let allPosts = await getCollection('blog');
 // will this commit be signed?
 ---
 <SiteLayout>

@@ -6,7 +6,7 @@ import ProseContent from '../components/ProseContent.astro';
 import WrapperWithNav from '../components/WrapperWithNav.astro';
 
 interface Props {
-  content:CollectionEntry<"posts">["data"];
+  content:CollectionEntry<"blog">["data"];
 }
 
 const { content } = Astro.props;

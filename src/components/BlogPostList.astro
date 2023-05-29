@@ -2,7 +2,7 @@
 import BlogPostPreview from "./BlogPostPreview.astro";
 import type { CollectionEntry } from 'astro:content';
 interface Props {
-  posts:  CollectionEntry<'posts'>[];
+  posts:  CollectionEntry<'blog'>[];
   showTag?: boolean;
 }
 
@@ -10,5 +10,5 @@ const {posts,showTag} = Astro.props;
 let computedPosts = posts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf())
 ---
 <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
-  {computedPosts.map(p=><BlogPostPreview post={p} {showTag}/>)}
+  {computedPosts.map(p=><BlogPostPreview blog={p} {showTag}/>)}
 </div>

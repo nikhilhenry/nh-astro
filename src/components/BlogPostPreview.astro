@@ -2,12 +2,12 @@
 import type { CollectionEntry } from 'astro:content';
 import { Picture } from "astro-imagetools/components";
 interface Props {
-  post:  CollectionEntry<'posts'>;
+  blog:  CollectionEntry<'blog'>;
   showTag?: boolean;
 }
 
-const { post,showTag } = Astro.props;
-const url = "/posts/" + post.slug;
+const { blog: post,showTag } = Astro.props;
+const url = "/blog/" + post.slug;
 ---
 <article>
 	<a href={url} class="block">
