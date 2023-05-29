@@ -20,8 +20,8 @@ devDependencies:
     specifier: ^2.5.5
     version: 2.5.5
   astro-imagetools:
-    specifier: ^0.6.17
-    version: 0.6.17(astro@2.5.5)
+    specifier: ^0.8.1
+    version: 0.8.1(astro@2.5.5)
   autoprefixer:
     specifier: ^10.4.14
     version: 10.4.14(postcss@8.4.24)
@@ -1313,8 +1313,8 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: true
 
-  /astro-imagetools@0.6.17(astro@2.5.5):
-    resolution: {integrity: sha512-it0E/7tNKPdZ8UhPrSo861URKdxZFYAj4OSveyBZ7WRBWr7sA/1UT+kXAT0po9zuOyhIqxG1gmkYbu8gtWIFNw==}
+  /astro-imagetools@0.8.1(astro@2.5.5):
+    resolution: {integrity: sha512-2E737IBqzuwkuK4FMYB9UmE1xmQWghn1HOHNMERrzZmGsKpGSAdQGo7nSnYwpy8amF+Do8sUx9wtCe2+6T4k+A==}
     engines: {node: ^14.15.0 || >=16.0.0}
     peerDependencies:
       astro: '>=0.26 || >=1.0.0-beta'
