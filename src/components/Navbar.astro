@@ -1,7 +1,7 @@
 ---
 import ModeSwitcherBtn from "./ModeSwitcherBtn.svelte";
 
-const path = Astro.canonicalURL.pathname
+const path = Astro.url.pathname;
 const links = [{name:"Home",link:"/"},{name:"About",link:"/about/"},{name:"Collections",link:"/collections/"},{name:"Projects",link:"/projects/"}]
 ---
 
