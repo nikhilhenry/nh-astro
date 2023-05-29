@@ -1,11 +1,18 @@
 ---
+import { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import BlogPost from '../components/BlogPost.astro';
+import {Picture} from 'astro-imagetools/components';
+import ProseContent from '../components/ProseContent.astro';
 import WrapperWithNav from '../components/WrapperWithNav.astro';
 
+interface Props {
+  content:CollectionEntry<"posts">["data"];
+}
 
 const { content } = Astro.props;
-const { title, description, publishDate, coverImg, permalink, alt } = content;
+const { title, description, publishDate, coverImg, alt } = content;
+
+const permalink = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 <html lang="en">
 	<head>
@@ -16,9 +23,18 @@ const { title, description, publishDate, coverImg, permalink, alt } = content;
 		<WrapperWithNav>
 		<div class="border-b-2 border-slate-300 dark:border-slate-600"></div>
     <div class="container mx-auto px-4 py-6 max-w-5xl">
-			<BlogPost {title} {coverImg} {publishDate} {alt}>
-				<slot />
-			</BlogPost>
+			<ProseContent>
+				{coverImg && <Picture src={coverImg} alt={alt} attributes={{img:{ class:"rounded-lg"}}}/>}
+				<div>
+					<header>
+						<p class="publish-date">{publishDate}</p>
+						<h1 class="title">{title}</h1>
+					</header>
+					<main>
+						<slot />
+					</main>
+				</div>
+			</ProseContent>
     </div>
 	</WrapperWithNav>
 	</body>

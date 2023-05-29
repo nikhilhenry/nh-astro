@@ -1,5 +1,10 @@
 ---
 import BlogPostPreview from "./BlogPostPreview.astro";
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  posts:  CollectionEntry<'posts'>[];
+  showTag?: boolean;
+}
 
 const {posts,showTag} = Astro.props;
 let computedPosts = posts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf())
