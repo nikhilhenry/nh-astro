@@ -23,6 +23,7 @@
     "tailwindcss": "^3.3.2"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.19.4"
+    "@astrojs/mdx": "^0.19.4",
+    "shiki": "^0.14.2"
   }
 }

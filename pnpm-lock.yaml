@@ -4,6 +4,9 @@ dependencies:
   '@astrojs/mdx':
     specifier: ^0.19.4
     version: 0.19.4(astro@2.5.5)(rollup@3.23.0)
+  shiki:
+    specifier: ^0.14.2
+    version: 0.14.2
 
 devDependencies:
   '@astrojs/sitemap':
