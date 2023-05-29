@@ -7,6 +7,8 @@ publishDate: 21 Jun 2022
 alt: screenshot of final build
 ---
 
+import { Code } from "astro/components";
+
 Forms and data input are always an essential aspect of any web application. At times, the web app may require to present the user with a series of inputs. Multi-step forms help achieve this goal with a stellar and distinct user experience. Today we'll be building a multi-step form in vue using typescript and [Tailwindcss](https://tailwindcss.com) and [daisyUI](https://daisyui.com), both of which compile down to plain css hence avoiding any increase in bundle size.
 
 You can checkout the finished product [here](https://x2ryog.sse.codesandbox.io/) or take a look at the source code [here](https://github.com/nikhilhenry/vue-multistepform).
@@ -23,7 +25,7 @@ Installation instruction for tailwindcss can be found [here](https://tailwindcss
 
 To install daisyUI run:
 
-```
+```bash
 npm i daisyUI --save-dev
 ```
 
@@ -109,8 +111,6 @@ Below are a few sample steps (styled with tailwind and daisyUI), but feel free t
 
 This is where the powerful class styles of daisyUI come in handy to elegantly style the progress indicator with a single class definition.
 
-<!-- template file -->
-
 _./src/components/MultiStepForm.vue_ → template section
 
 ```vue
@@ -130,8 +130,6 @@ _./src/components/MultiStepForm.vue_ → template section
 ```
 
 _./src/components/MultiStepForm.vue_ → script section
-
-<!-- script file -->
 
 ```vue
 <script lang="ts" setup>
