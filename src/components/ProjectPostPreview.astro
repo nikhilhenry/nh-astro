@@ -1,13 +1,18 @@
 ---
 import { Picture } from "astro-imagetools/components";
+import { CollectionEntry } from "astro:content";
 
-const {title, description,coverImg, source, live } = Astro.props.post.frontmatter
-const postLink = Astro.props.post.url
+interface Props {
+  project:CollectionEntry<"project">
+}
+
+const {title, description,coverImg, source, live } = Astro.props.project.data
+const url = "/project/" + Astro.props.project.slug;
 ---
-<div class="w-full">
+<div class="w-full"></div>
 <article class="w-full bg-gray-200 dark:bg-gray-800 shadow-md hover:outline outline-3 outline-offset-4 outline-slate-800 dark:outline-stone-50 rounded-lg pl-6 flex justify-between">
   <main class="py-4 max-w-sm flex flex-col sm:pr-3 pr-1">
-    <a href={postLink} class="hover:underline"><h2 class="text-2xl font-semibold">{title}</h2></a>
+    <a href={url} class="hover:underline"><h2 class="text-2xl font-semibold">{title}</h2></a>
     <p class="text-slate-500 dark:text-slate-400 mt-3 text-sm">{description}</p>
     <div class="flex-grow"></div>
     <div class="pt-3 flex items-center gap-5">

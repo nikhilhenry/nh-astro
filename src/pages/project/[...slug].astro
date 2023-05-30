@@ -15,8 +15,7 @@ interface Props {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const frontmatter = {description:"",...entry.data}
 ---
-<BlogPost content={frontmatter}>
+<BlogPost content={entry.data}>
   <Content />
 </BlogPost>
