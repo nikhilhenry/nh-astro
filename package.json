@@ -24,10 +24,12 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.4",
+    "@astrojs/preact": "^2.2.0",
     "@astrojs/react": "^2.2.0",
     "@docsearch/react": "3",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "preact": "^10.6.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "shiki": "^0.14.2"
