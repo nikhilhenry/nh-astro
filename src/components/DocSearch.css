@@ -1,4 +1,7 @@
 :root {
+  --theme-accent-secondary: #2563eb;
+  --theme-bg: #f3f4f6;
+  --theme-backdrop-overlay: #64748b56;
   --docsearch-primary-color: var(--theme-accent-secondary);
   --docsearch-modal-background: var(--theme-bg);
   --docsearch-footer-background: var(--theme-bg-gradient-bottom);
@@ -10,7 +13,16 @@
   --docsearch-container-background: var(--theme-backdrop-overlay);
 }
 
-:root.theme-dark {
+:root.dark {
+  --theme-accent-secondary: #2563eb;
+  --theme-bg: #0f172a;
+  --theme-backdrop-overlay: #00000088;
+  --theme-text: #fff;
+  --theme-text-lighter: #e2e8f0;
+  --theme-bg-offset: #020617;
+  --theme-glow-highlight: #2563eb;
+  --theme-glow-blur: 0.5;
+  --theme-glow-diffuse: 0.5;
   --docsearch-searchbox-focus-background: var(--theme-bg-offset);
   --docsearch-hit-background: var(--theme-bg-offset);
   --docsearch-footer-shadow: inset 0 -1px 0 var(--theme-glow-highlight),
