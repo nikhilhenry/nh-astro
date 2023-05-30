@@ -11,7 +11,7 @@
 
   function toggleTheme() {
     console.log("switching theme")
-      window.document.body.classList.toggle(THEME_DARK)
+      window.document.documentElement.classList.toggle(THEME_DARK)
       currTheme = localStorage.getItem('theme') === THEME_DARK ? THEME_LIGHT : THEME_DARK
       // Update Storage
       localStorage.setItem('theme', currTheme)
