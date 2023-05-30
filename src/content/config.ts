@@ -20,6 +20,7 @@ const projectCollection = defineCollection({
     publishDate: z.string(),
     source: z.string().optional(),
     live: z.string().optional(),
+    description: z.string(),
   }),
 });
 
