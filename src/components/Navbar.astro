@@ -1,12 +1,16 @@
 ---
 import ModeSwitcherBtn from "./ModeSwitcherBtn.svelte";
+import Search from "./Search.astro"
 
 const path = Astro.url.pathname;
 const links = [{name:"Home",link:"/"},{name:"About",link:"/about/"},{name:"Projects",link:"/project/"}]
 ---
 
 <div class="navbar pt-6">
-  <a href="/"><h1 class="text-3xl font-semibold tracking-wide">Nikhil Henry</h1></a>
+  <div class="flex justify-between">
+    <a href="/"><h1 class="text-3xl font-semibold tracking-wide">Nikhil Henry</h1></a>
+    <Search/>
+  </div>
   <div class="links py-6 flex justify-between">
     <!-- nav links -->
     <ul class="flex max-w-md text-gray-800 dark:text-gray-300">
