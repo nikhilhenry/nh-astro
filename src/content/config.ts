@@ -18,8 +18,8 @@ const projectCollection = defineCollection({
     coverImg: z.string(),
     alt: z.string(),
     publishDate: z.string(),
-    source: z.string(),
-    live: z.string(),
+    source: z.string().optional(),
+    live: z.string().optional(),
   }),
 });
 
