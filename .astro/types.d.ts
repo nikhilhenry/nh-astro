@@ -1,5 +1,15 @@
 declare module 'astro:content' {
 	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
+	interface Render {
 		'.md': Promise<{
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
@@ -188,35 +198,65 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"posts": {
-"HowIBuiltMyBlog.md": {
-	id: "HowIBuiltMyBlog.md";
+		"blog": {
+"HowIBuiltMyBlog.mdx": {
+	id: "HowIBuiltMyBlog.mdx";
   slug: "howibuiltmyblog";
   body: string;
-  collection: "posts";
-  data: any
-} & { render(): Render[".md"] };
-"WhyIWontBeFollowingMyPassion.md": {
-	id: "WhyIWontBeFollowingMyPassion.md";
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"WhyIWontBeFollowingMyPassion.mdx": {
+	id: "WhyIWontBeFollowingMyPassion.mdx";
   slug: "whyiwontbefollowingmypassion";
   body: string;
-  collection: "posts";
-  data: any
-} & { render(): Render[".md"] };
-"rebuild.md": {
-	id: "rebuild.md";
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"rebuild.mdx": {
+	id: "rebuild.mdx";
   slug: "rebuild";
   body: string;
-  collection: "posts";
-  data: any
-} & { render(): Render[".md"] };
-"vue-form.md": {
-	id: "vue-form.md";
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"vue-form.mdx": {
+	id: "vue-form.mdx";
   slug: "vue-form";
   body: string;
-  collection: "posts";
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+};
+"project": {
+"set.mdx": {
+	id: "set.mdx";
+  slug: "set";
+  body: string;
+  collection: "project";
   data: any
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
+"sw.mdx": {
+	id: "sw.mdx";
+  slug: "sw";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
+"unavoca.mdx": {
+	id: "unavoca.mdx";
+  slug: "unavoca";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
+"upscape.mdx": {
+	id: "upscape.mdx";
+  slug: "upscape";
+  body: string;
+  collection: "project";
+  data: any
+} & { render(): Render[".mdx"] };
 };
 
 	};
@@ -227,5 +267,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }

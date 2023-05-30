@@ -1,7 +1,4 @@
 ---
-setup: |
- import Layout from "../../layouts/BlogPost.astro"
- import ProjectLinks from "../../components/ProjectLinks.astro"
 title: Upscape
 coverImg: /assets/blog/upscape.png
 alt: an image
@@ -10,15 +7,23 @@ publishDate: 5 Dec 2021
 source: https://github.com/nikhilhenry/upscape
 live: https://upscape-nikhil.herokuapp.com
 ---
+
+import ProjectLinks from "../../components/ProjectLinks.astro";
+
 <div class="not-prose">
-<ProjectLinks source={frontmatter.source} live={frontmatter.live}></ProjectLinks>
+  <ProjectLinks
+    source={frontmatter.source}
+    live={frontmatter.live}
+  ></ProjectLinks>
 </div>
 
 ## About
-A productivity app built for *Do-ers*. Also since I wanted experiment with golang and was never happy with any other 
-todo app since they were either too minimal or too complex. Upscape implements time-blocking and ahead planning productivity techniques to ensure you stay productive throughout the day. 
+
+A productivity app built for _Do-ers_. Also since I wanted experiment with golang and was never happy with any other
+todo app since they were either too minimal or too complex. Upscape implements time-blocking and ahead planning productivity techniques to ensure you stay productive throughout the day.
 
 ## Tech Stack
+
 - [Gin](https://gin-gonic.com/) backend
 - [Go](https://golang.org) powered backend
 - [MongoDB Atlas](https://cloud.mongodb.com/v2/5ea9386c468f9c5f315a6535#metrics/replicaSet/5ec2597012bfec1f1f998f60/explorer) (DaaS)
@@ -27,8 +32,11 @@ todo app since they were either too minimal or too complex. Upscape implements t
 - [Heroku](https://dashboard.heroku.com/apps/carenikhil) for PaaS
 - [Github](https://github.com/nikhilhenry/) CI/CD
 - [Tailwind](https://tailwind.com) CSS Utility Classes
+
 ## Features
+
 ### Daily Highlights
+
 Ping a reminder to help you focus on the most important ask of the day. Stay focused, stay sharp and stay resilient.
 ![Daily Highlight](../../../public/assets/blog/upscape-1.png)
 
@@ -38,6 +46,7 @@ Create tasks for tomorrow today!
 ![Tomorrow Tasks](../../../public/assets/blog/upscape-5.png)
 
 ### Hue Based Hour Intensities
+
 Visual indicators to let you know the work intensity throughout the day.
 ![medium intensity](../../../public/assets/blog/upscape-2.png)
 ![max intensity](../../../public/assets/blog/upscape-3.png)
@@ -46,7 +55,3 @@ Visual indicators to let you know the work intensity throughout the day.
 ## Challenges
 
 This was my hands-on project with golang apart from tutorials. The most complicated aspect of building the back-end was the intergation with MongoDB. Unfortunately, Go does not have a convienient ORM for MongoDB like [mongoose](https://mongoosejs.com/docs/) for javascript. Instead, I ended up writing all the queries myself using the [official database drive](https://www.mongodb.com/docs/drivers/go/current/). Apart from the minor greviance, building the API using Gin was actually pretty simple and its framework structure was pretty intutive although albiet not as simple as [express](https://expressjs.com/).
-
-
-
-
