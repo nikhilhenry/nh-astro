@@ -1,11 +1,14 @@
 ---
-import readingTime from "reading-time";
 import BlogPostPreview from "./BlogPostPreview.astro";
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  posts:  CollectionEntry<'blog'>[];
+  showTag?: boolean;
+}
 
 const {posts,showTag} = Astro.props;
-let computedPosts = posts.map(p=>{ return {time:readingTime(p.file).text,...p}})
-computedPosts = computedPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf())
+let computedPosts = posts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf())
 ---
 <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
-  {computedPosts.map(p=><BlogPostPreview post={p} {showTag}/>)}
+  {computedPosts.map(p=><BlogPostPreview blog={p} {showTag}/>)}
 </div>

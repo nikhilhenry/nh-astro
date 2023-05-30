@@ -1,0 +1,48 @@
+---
+title: Set - SwiftUI
+coverImg: /assets/blog/set.png
+alt: an image
+description: A fully functional game of SET written in SwiftUI for iOS. Mid-term project for Stanford CS193p.
+publishDate: 26 Feb 2022
+source: https://github.com/nikhilhenry/set
+---
+
+import ProjectLinks from "../../components/ProjectLinks.astro"
+import { Picture } from "astro-imagetools/components"
+
+<div class="not-prose">
+  <ProjectLinks
+    source={frontmatter.source}
+    live={frontmatter.live}
+  ></ProjectLinks>
+</div>
+
+## About
+
+A fully functional game of 1-player [Set](<https://en.wikipedia.org/wiki/Set_(card_game)>) built entirely from scratch as part of
+Stanford's CS193p [mid-term assisgment](https://cs193p.sites.stanford.edu/sites/g/files/sbiybj16636/files/media/file/assignment_3_0.pdf).
+
+## Stack
+
+- Functional UI programming using SwiftUI 2.0 and Swift 5.5
+- Data architecture using MVC
+- Motion using SwiftUI animation library
+
+## Features
+
+### Deck and Discard Pile
+
+Keep track of discraded cards from the game and deal new cards from the undealt pile.
+
+<Picture src={"/assets/blog/set-3.png"} alt="set-screenshot" height={600} />
+
+### Set Matching
+
+An efficient alogrithm to identify a matching Set and help the player progress.
+
+<Picture src={"/assets/blog/set-2.png"} alt="set-screenshot" height={600} />
+
+## Thoughts
+
+Architecting the app from scratch was particularly challening as there was no real road-map or implementation guidelines. The hints, however, did guide me through what I needed a head of implementing a particulary feature which helped me create a mental model of the implementation priority list. Animation took the longest to implement as I wasn't
+well-wersed with the unique animation system of SwiftUI. The set matching alogrithm took many iterations to reach a fast, perfomant and functional state, but in the end I am extremely proud of the outcome I was able to achieve in 2 weeks after only having used Swift and SwiftUI for 2 weeks.
