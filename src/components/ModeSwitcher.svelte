@@ -21,10 +21,10 @@
 
   onMount(() => {
       if (localStorage.getItem('theme') === THEME_DARK || (!('theme' in localStorage) && window.matchMedia(`(prefers-color-scheme: ${THEME_DARK})`).matches)) {
-          window.document.body.classList.add(THEME_DARK)
+          window.document.documentElement.classList.add(THEME_DARK)
           currTheme = THEME_DARK
       } else {
-          window.document.body.classList.remove(THEME_DARK)
+          window.document.documentElement.classList.remove(THEME_DARK)
           currTheme = THEME_LIGHT
       }
       // Update Store
