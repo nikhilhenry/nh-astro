@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { blog: post,showTag } = Astro.props;
-const url = "/blog/" + post.slug;
+const url = "/blog/" + post.slug + "/";
 ---
 <article>
 	<a href={url} class="block">

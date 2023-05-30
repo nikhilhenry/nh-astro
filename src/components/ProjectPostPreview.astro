@@ -7,7 +7,7 @@ interface Props {
 }
 
 const {title, description,coverImg, source, live } = Astro.props.project.data
-const url = "/project/" + Astro.props.project.slug;
+const url = "/project/" + Astro.props.project.slug + "/";
 ---
 <div class="w-full"></div>
 <article class="w-full bg-gray-200 dark:bg-gray-800 shadow-md hover:outline outline-3 outline-offset-4 outline-slate-800 dark:outline-stone-50 rounded-lg pl-6 flex justify-between">
