@@ -234,28 +234,28 @@ declare module 'astro:content' {
   slug: "set";
   body: string;
   collection: "project";
-  data: any
+  data: InferEntrySchema<"project">
 } & { render(): Render[".mdx"] };
 "sw.mdx": {
 	id: "sw.mdx";
   slug: "sw";
   body: string;
   collection: "project";
-  data: any
+  data: InferEntrySchema<"project">
 } & { render(): Render[".mdx"] };
 "unavoca.mdx": {
 	id: "unavoca.mdx";
   slug: "unavoca";
   body: string;
   collection: "project";
-  data: any
+  data: InferEntrySchema<"project">
 } & { render(): Render[".mdx"] };
 "upscape.mdx": {
 	id: "upscape.mdx";
   slug: "upscape";
   body: string;
   collection: "project";
-  data: any
+  data: InferEntrySchema<"project">
 } & { render(): Render[".mdx"] };
 };
 
