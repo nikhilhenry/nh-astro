@@ -21,7 +21,7 @@
     "astro": "^2.5.5",
     "astro-imagetools": "^0.8.1",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
+    "postcss": "^8.4.31",
     "preact": "^10.6.5",
     "reading-time": "^1.5.0",
     "shiki": "^0.14.2",
